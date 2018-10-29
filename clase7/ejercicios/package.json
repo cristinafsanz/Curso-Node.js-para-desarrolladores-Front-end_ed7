@@ -1,0 +1,10 @@
+{
+  "main": "lib/split-word.js",
+  "scripts": {
+    "test": "mocha tests/*-test.js"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}

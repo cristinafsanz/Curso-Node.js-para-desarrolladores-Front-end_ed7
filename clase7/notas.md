@@ -41,7 +41,11 @@ beforeEach: se ejecuta antes de cada test
 
 EJERCICIO 1:
 
-npm i --save-dev mocha
+npm install mocha -g
+
+touch package.json
+echo {} > package.json
+
 npm i --save-dev chai
 
 https://www.chaijs.com/api/bdd/
@@ -49,7 +53,7 @@ https://www.chaijs.com/api/bdd/
 Incluir en el package.json:
 
 "scripts": {
-"test": "mocha tests/*-test.js"
+  "test": "mocha tests/*-test.js"
 },
 
 Vamos a crear el test primero y luego la función para hacer BDD:
@@ -79,6 +83,8 @@ split-word.js
 module.exports = function() {
 return [];
 };
+
+Ejecutar: npm test // Pasa el test, es un array
 
 Más información por aquí:
 
