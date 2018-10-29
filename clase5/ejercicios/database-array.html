@@ -1,0 +1,36 @@
+
+<input type="file" id="file" />
+
+<script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDk9OrOPOoedLf1flgolrrIfc_iGvfSonU",
+    authDomain: "curso-nodejs-ae2c7.firebaseapp.com",
+    databaseURL: "https://curso-nodejs-ae2c7.firebaseio.com",
+    projectId: "curso-nodejs-ae2c7",
+    storageBucket: "curso-nodejs-ae2c7.appspot.com",
+    messagingSenderId: "849510397610"
+  };
+  firebase.initializeApp(config);
+
+  const testRef = firebase.database().ref('array');
+
+  testRef.on('child_added', (snapshot) => {
+     console.log(snapshot.val());
+  });
+
+  testRef.push({
+    timestamp: Date.now(),
+    name: 'Cris4'
+  });
+  testRef.push({
+    timestamp: Date.now(),
+    name: 'Cris5'
+  });
+  testRef.push({
+    timestamp: Date.now(),
+    name: 'Cris6'
+  });
+</script>
+

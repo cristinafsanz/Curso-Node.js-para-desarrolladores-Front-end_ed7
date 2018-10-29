@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  button#logout(type='button', class='btn btn-primary') Logout
+
+  div.input-group.mb-3
+    div.input-group-prepend
+      span.input-group-text #
+    input#hashtag.form-control(type='text', placeholder='Hashtag')
+
+  #map-container
+    #map
+
+  #tweets
+  
+  script(src='/socket.io/socket.io.js', type='text/javascript')
+  script(src='javascripts/map.js', type='text/javascript')
+  script(src='https://maps.googleapis.com/maps/api/js?callback=initMap&key=' + MAPS_API, async, defer)
